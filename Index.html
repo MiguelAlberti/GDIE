@@ -1,27 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML 
 <HTML>
    <HEAD>
       <TITLE>Primer intento de video</TITLE>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
    </HEAD>
    
    <BODY  background="Imagenes/grupo2.png">
    
-   
-
    <div class="titulo">
       <h1>Moonbayband</h1>
    </div>
 
- 
-
-
     <div class="video">
-      <video width="200" height="350"  controls>
+      <video width="300 height="400"  controls>
         <source src="Imagenes/video.mp4" type="video/mp4">
          Your browser does not support the video tag.
-        </video>
+         <track label="Inglés"  kind="subtitles" srclang="en" src="vtt/ingles.vtt"  >
+         <track label="Español" kind="subtitles" srclang="es" src="vtt/español.vtt" >
+      </video>
     </div>
 
    </BODY>
