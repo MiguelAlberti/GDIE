@@ -1,2 +1,2 @@
 # GDIE
-Repositorio para las prácticas de GDIW
+Repositorio para las prácticas de GDIE
