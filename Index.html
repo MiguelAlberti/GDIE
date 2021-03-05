@@ -1,25 +1,65 @@
-<!DOCTYPE HTML 
-<HTML>
-   <HEAD>
-      <TITLE>Primer intento de video</TITLE>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-      <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
-   </HEAD>
-   
-   <BODY  background="Imagenes/grupo2.png">
-   
-   <div class="titulo">
-      <h1>Moonbayband</h1>
+<!DOCTYPE HTML <HTML>
+
+<head>
+   <title>Moon Bay - New Life</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <a class="navbar-brand" href="#">
+      <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="moon bay logo">
+      Moon Bay
+   </a>
+   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+         <a class="nav-item nav-link active" href="#">Vídeo<span class="sr-only"></span></a>
+         <a class="nav-item nav-link" href="#">Conócenos</a>
+         <a class="nav-item nav-link" href="#">Contacto</a>
+      </div>
+   </div>
+</nav>
+
+<body class="cuerpo">
+
+   <div class="row">
+
+      <div class="col">
+         <video width="720" height="296" controls>
+            <source src="img/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            <track label="Inglés"   kind="subtitles" srclang="en" src="vtt/ingles.vtt">
+            <track label="Español"  kind="subtitles" srclang="es" src="vtt/español.vtt">
+         </video>
+      </div>
+
+      <div class="col" style="color:white">
+         <h6>Fundada en 2019, Moon Bay es una banda de indie-pop de Mallorca, Islas Baleares.</h6>
+         <h6>
+            Formada por 6 integrantes: Aarón López como cantante, Xavi Covas como teclista, Miguel Vidal como
+            guitarrista
+            rítmico, Óscar Puigcercós como guitarra solista, Alex Leonel Bordoy como bajista y Tomeu Adrover a la
+            batería.
+         </h6>
+         <h6>
+            Se dieron a conocer a principios de 2021 con su primer single "New Life" compuesto, escrito y producido por
+            los
+            propios integrantes.
+         </h6>
+         <h6>
+            El grupo surge de un territorio isleño, en el cual intenta plasmar el buen rollo y el movimiento propios de
+            un
+            panorama insular, juntando en su estilo influencias del pop, la música indie y pinceladas de funk, entre
+            otros
+            géneros.
+         </h6>
+
+      </div>
+
    </div>
 
-    <div class="video">
-      <video width="300 height="400"  controls>
-        <source src="Imagenes/video.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         <track label="Inglés"  kind="subtitles" srclang="en" src="vtt/ingles.vtt"  >
-         <track label="Español" kind="subtitles" srclang="es" src="vtt/español.vtt" >
-      </video>
-    </div>
+</body>
 
-   </BODY>
 </HTML>

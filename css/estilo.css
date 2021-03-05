@@ -8,6 +8,10 @@
 
 .video {
     text-align:center;
-    width="300" 
-    height="400" 
+    width:"300";
+    height:"400";
     }
+
+.cuerpo {
+  background-color:#7B4ACB;
+}
