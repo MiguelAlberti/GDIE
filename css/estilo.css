@@ -15,3 +15,9 @@
 .cuerpo {
   background-color:#7B4ACB;
 }
+
+h6{
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+}
