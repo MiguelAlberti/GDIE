@@ -1,73 +1,60 @@
-<!DOCTYPE HTML <HTML>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Moon Bay - New Life</title>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/logo.jpg" />	
+
+	<!-- Links con las librerias de JS  -->   
+	<link href="https://vjs.zencdn.net/7.2/video-js.min.css" rel="stylesheet"> 
+	<script src="https://vjs.zencdn.net/7.2/video.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>MoonBay</title>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <a class="navbar-brand" href="#">
-      <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="moon bay logo">
-      Moon Bay
-   </a>
-   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-         <a class="nav-item nav-link active" href="#">Vídeo<span class="sr-only"></span></a>
-         <a class="nav-item nav-link" href="#">Conócenos</a>
-         <a class="nav-item nav-link" href="#">Contacto</a>
-      </div>
-   </div>
-</nav>
+	<a class="navbar-brand" href="#">
+	   <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="moon bay logo">
+	   Moon Bay
+	</a>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	   <div class="navbar-nav">
+		  <a class="nav-item nav-link active" href="#">Vídeo<span class="sr-only"></span></a>
+		  <a class="nav-item nav-link" href="#">Conócenos</a>
+		  <a class="nav-item nav-link" href="#">Contacto</a>
+	   </div>
+	</div>
+ </nav>
 
-<body class="cuerpo">
+<body>
+	<header>
+		<h1 class="titulo">Moon Bay</h1>
+	</header>
 
-   <div class="row" style="margin-top: 20px;margin-left: auto;">
+	<main>
+		<div class="contenedor">
+			<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
+				<source src="img/video.mp4"  type="video/mp4">
+			</video>
+	
+			<article>
+				<h2>Moon Bay - New Life (Official Video)</h2>
+				<p>Fundada en 2019, Moon Bay es una banda de indie-pop de Mallorca, Islas Baleares.</p>
+				<p>Formada por 6 integrantes: Aarón López como cantante, Xavi Covas como teclista, Miguel Vidal como guitarrista rítmico, Óscar Puigcercós como guitarra solista, 
+					Alex Leonel Bordoy como bajista y Tomeu Adrover a la batería</p>
+				<p>Se dieron a conocer a principios de 2021 con su primer single "New Life" compuesto, escrito y producido por los propios integrantes</p>
+				<p>El grupo surge de un territorio isleño, en el cual intenta plasmar el buen rollo y el movimiento propios de un panorama insular, juntando en su estilo influencias del pop,
+					 la música indie y pinceladas de funk, entre otros géneros.</p>
+			</article>
+		</div>
+	</main>
 
-      <div class="col">
-         <div class="card" style="background-color:royalblue">
-            <video width="720" height="296" controls>
-               <source src="img/video.mp4" type="video/mp4">
-               Your browser does not support the video tag.
-               <track label="Inglés"   kind="subtitles" srclang="en" src="vtt/ingles.vtt">
-               <track label="Español"  kind="subtitles" srclang="es" src="vtt/español.vtt">
-            </video>
-         </div>
-      </div>
-
-      <div class="col">
-         <div class="card" style="background-color:royalblue;width: 550px;">
-            <div class="texto" style="width: 500px;margin:0 auto;margin-top: 10px;margin-bottom: 10px;">
-               <h6>Fundada en 2019, Moon Bay es una banda de indie-pop de Mallorca, Islas Baleares.</h6>
-               <h6>
-                  Formada por 6 integrantes: Aarón López como cantante, Xavi Covas como teclista, Miguel Vidal como
-                  guitarrista
-                  rítmico, Óscar Puigcercós como guitarra solista, Alex Leonel Bordoy como bajista y Tomeu Adrover a la
-                  batería.
-               </h6>
-               <h6>
-                  Se dieron a conocer a principios de 2021 con su primer single "New Life" compuesto, escrito y
-                  producido
-                  por
-                  los
-                  propios integrantes.
-               </h6>
-               <h6>
-                  El grupo surge de un territorio isleño, en el cual intenta plasmar el buen rollo y el movimiento
-                  propios
-                  de
-                  un
-                  panorama insular, juntando en su estilo influencias del pop, la música indie y pinceladas de funk,
-                  entre
-                  otros
-                  géneros.
-               </h6>
-            </div>
-         </div>
-      </div>
-   </div>
+	<script>
+		var reproductor = videojs('fm-video', {
+			fluid: true
+		});
+	</script>
 </body>
-
-</HTML>
+</html>

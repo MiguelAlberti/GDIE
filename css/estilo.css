@@ -13,11 +13,49 @@
     }
 
 .cuerpo {
-  background-color:#7B4ACB;
+  background-color:#4ab1cb;
 }
 
 h6{
   color:white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
+}
+
+/* Estilos para el video*/
+
+.fm-video{
+width: 100%;
+box-shadow: 0px 0px 0px opx rgba(0,0,0,.5);
+}
+
+.fm-video .vjs-control-bar{
+background:  white;
+color:rgb(250, 128, 114);
+}
+
+.fm-video .vjs-play-progress {
+  color: red;
+}
+
+.fm-video .vjs-volume-level{
+  background-color: red;
+}
+
+.fm-video .vjs-slider{
+background: red;
+}
+
+.video-js:hover .vjs-big-play-button{
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.fm-video .vjs-big-play-button{
+background: rgba(0, 0, 0, 0.2);
+width: 80px;
+height: 80px;
+line-height: 80px;
+border-radius: 100%;
+border: none;
+
 }
