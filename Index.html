@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- <head> -->
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,9 @@
    <!-- Links con las librerias de BootStrap -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <!-- Importamos nuestras funciones de JavaScript -->
+   <script src="js/funciones.js"></script>
 
    <title>MoonBay</title>
 </head>
@@ -36,7 +40,6 @@
       </div>
    </nav>
 
-   <!-- <main> -->
    <div class="container">
 
       <div class="row">
@@ -44,12 +47,12 @@
          <div class="col" style="margin-top: 70px;">
             <div class="row">
                <div class="col">
-                  <video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls poster="img/fondo.png"
-                     id="fm-video" >
+                  <video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls
+                     poster="img/fondo.png" id="fm-video">
                      <!-- Fuentes de vídeo -->
                      <source src="img/video.mp4" type="video/mp4">
                      <!-- Tracks: metadatos, subtítulos, etc. -->
-                     <track id="SubtitulosEspañol" kind="subtitles" src="vtt/ingles.vtt" lang="en" label="Inglés"> 
+                     <track id="SubtitulosEspañol" kind="subtitles" src="vtt/ingles.vtt" lang="en" label="Inglés">
                   </video>
                </div>
             </div>
@@ -86,39 +89,37 @@
 
             <ul class="nav nav-tabs nav-fill" style="margin-top: 50px;">
                <li class="nav-item">
-                  <a class="nav-link active" style="background-color:#F3CAE9;" href="#">Integrantes</a>
+                  <a class="nav-link active" style="background-color:#F3CAE9;" onclick="infoIntegrantes()" href="#">Integrantes</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" style="background-color:#F3CAE9;" href="#">Acordes</a>
+                  <a class="nav-link active" style="background-color:#F3CAE9;" onclick="infoAcordes()" href="#">Acordes</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" style="background-color:#F3CAE9;" href="#">Instrumentos</a>
+                  <a class="nav-link active" style="background-color:#F3CAE9;" onclick="selectorInstrumentos()" href="#">Instrumentos</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" style="background-color:#F3CAE9;" href="#">Completa la letra</a>
+                  <a class="nav-link active" style="background-color:#F3CAE9;" onclick="completarLetra()" href="#">Completa la letra</a>
                </li>
             </ul>
 
-            <article style="margin-top:0;">
-               <h2>Moon Bay - New Life (Official Video)</h2>
-               <p>Fundada en 2019, Moon Bay es una banda de indie-pop de Mallorca, Islas Baleares.</p>
-               <p>Formada por 6 integrantes: Aarón López como cantante, Xavi Covas como teclista, Miguel Vidal como
-                  guitarrista rítmico, Óscar Puigcercós como guitarra solista,
-                  Alex Leonel Bordoy como bajista y Tomeu Adrover a la batería</p>
-               <p>Se dieron a conocer a principios de 2021 con su primer single "New Life" compuesto, escrito y
-                  producido
-                  por los propios integrantes</p>
-               <p>El grupo surge de un territorio isleño, en el cual intenta plasmar el buen rollo y el movimiento
-                  propios
-                  de un panorama insular, juntando en su estilo influencias del pop,
-                  la música indie y pinceladas de funk, entre otros géneros.</p>
-            </article>
+            <div id="tabMiembros" style="height: 500px;background-color: #F3CAE9;display: block;">
+               Informacion miembros del grupo
+            </div>
+
+            <div id="tabAcordes" style="height: 500px;background-color: #F3CAE9;display: none;">
+               Informacion acordes de la canción
+            </div>
+
+            <div id="tabInstrumentos" style="height: 500px;background-color: #F3CAE9;display: none;">
+               Selección de los instrumentos
+            </div>
+
+            <div id="tabLetra" style="height: 500px;background-color: #F3CAE9;display: none;">
+               Completa la letra
+            </div>
          </div>
       </div>
-
-
    </div>
-   <!-- </main> -->
 
    <script>
       var reproductor = videojs('fm-video', {
